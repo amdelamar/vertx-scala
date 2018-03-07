@@ -17,13 +17,13 @@ A simple Scala webapp using Eclipse [Vert.x](http://vertx.io)
 ## Run 
 
 1. Start server `scala build/libs/vertx-scala-0.1.0.jar`
-1. Visit [https://localhost:8080/](https://localhost:8080/) to see the app running.
+1. Visit [http://localhost:8080/](http://localhost:8080/) to see the app running.
 
 ## Run with Redeploy
 
 App can be run in redeploy mode, so any changes to files are recompiled quickly. Which is useful for development.
 
 1. Run redeploy `./gradlew run`
-1. Visit [https://localhost:8080/](https://localhost:8080/) to see the app running.
+1. Visit [http://localhost:8080/](http://localhost:8080/) to see the app running.
 
 This last command launches the application and redeploys as soon as you change something in `src/`.
