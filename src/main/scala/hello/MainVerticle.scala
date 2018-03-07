@@ -1,12 +1,7 @@
-import io.vertx.core.Vertx
-import io.vertx.lang.scala.ScalaVerticle
+package hello
 
-object MainVerticle {
-  def main(args: Array[String]): Unit = {
-    val vertx = Vertx.vertx
-    vertx.deployVerticle(ScalaVerticle.nameForVerticle[MainVerticle])
-  }
-}
+import io.vertx.lang.scala.ScalaVerticle
+import scala.reflect.api.materializeTypeTag
 
 class MainVerticle extends ScalaVerticle {
 
@@ -18,7 +13,7 @@ class MainVerticle extends ScalaVerticle {
         .putHeader("content-type", "text/plain")
         .end("Hello from Vert.x"))
       .listen(8080)
-     println("Started on port 8080")
+     println("Started on port",8080)
   }
   
   override def stop(): Unit = {
