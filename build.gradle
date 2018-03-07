@@ -4,10 +4,10 @@ plugins {
 	id "com.github.johnrengelman.shadow" version "2.0.2"
 }
 
+group = 'com.amdelamar'
 version = '0.1.0'
 jar.baseName = 'vertx-scala'
 jar.enabled = false
-mainClassName = 'MainVerticle'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -30,4 +30,24 @@ dependencies {
     // test dependencies
     testCompile 'junit:junit:4.12'
     testCompile 'io.vertx:vertx-unit:3.5.+'
+}
+
+mainClassName = 'hello.Server'
+def mainVerticleName = 'hello.MainVerticle'
+def watchForChange = 'src/**/*'
+def doOnChange = './gradlew classes'
+if (System.getProperty("os.name").toLowerCase().contains("windows")) {
+    doOnChange = '.\\gradlew classes'
+}
+
+// Vertx redeploy
+run {
+    args = ['run', mainVerticleName, "--redeploy=$watchForChange", "--launcher-class=$mainClassName", "--on-redeploy=$doOnChange"]
+}
+
+shadowJar {
+    classifier = null
+    manifest {
+        attributes "Main-Verticle": mainVerticleName
+    }
 }
