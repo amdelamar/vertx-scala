@@ -1,12 +1,11 @@
 # vertx-scala
 
-A simple Scala webapp using Eclipse [Vert.x](http://vertx.io)
+A simple Scala webapp using Eclipse [Vert.x](http://vertx.io).
 
 ## Prerequisites
 
-* [Java 1.8](https://www.java.com/download/)
-* [Scala 2.12](https://www.scala-lang.org/download/)
-* [Docker](https://docs.docker.com/engine/installation/) (Optional)
+* [JDK 1.8+](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [Scala 2.12+](https://www.scala-lang.org/download/)
 
 ## Download and Build
 
