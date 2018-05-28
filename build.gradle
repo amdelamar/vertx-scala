@@ -16,20 +16,16 @@ repositories {
 }
 
 dependencies {
-    compile 'org.scala-lang:scala-compiler:2.12.+'
-    compile 'org.scala-lang:scala-reflect:2.12.+'
+    // Scala Lang
     compile 'org.scala-lang:scala-library:2.12.+'
+    
+    // Vertx
     compile 'io.vertx:vertx-lang-scala_2.12:3.5.+'
     compile 'io.vertx:vertx-core:3.5.+'
     compile 'io.vertx:vertx-web:3.5.+'
 
-    // logging dependencies
-    // compile 'org.slf4j:slf4j-api:1.7.+'
-    // compile 'org.slf4j:slf4j-simple:1.7.+'
-
     // test dependencies
     testCompile 'junit:junit:4.12'
-    testCompile 'io.vertx:vertx-unit:3.5.+'
 }
 
 mainClassName = 'hello.Server'

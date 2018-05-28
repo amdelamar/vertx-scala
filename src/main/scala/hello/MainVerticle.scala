@@ -11,7 +11,7 @@ class MainVerticle extends ScalaVerticle {
       .createHttpServer()
       .requestHandler(_.response()
         .putHeader("content-type", "text/plain")
-        .end("Hello from Vert.x"))
+        .end("Hello from Scala + Vert.x"))
       .listen(8080)
      println("Started on port",8080)
   }
